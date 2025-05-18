@@ -1,21 +1,22 @@
-ESP8266 Serial WiFi Connection Example
-This Arduino sketch demonstrates how to connect an ESP8266 WiFi module to a WiFi network using AT commands sent over a software serial interface. The code reads output from the ESP8266 and displays it on the Arduino serial monitor.
+# ESP8266 Serial WiFi Connection Example
 
-📋 What does this code do?
-Establishes a software serial connection between an Arduino and an ESP8266 WiFi module.
-Sends AT commands to connect the ESP8266 to a specified WiFi network.
-Reads and forwards responses from the ESP8266 to the Arduino serial monitor.
+This Arduino sketch demonstrates how to connect an **ESP8266 WiFi module** to a WiFi network using AT commands sent over a software serial interface. The code also reads output from the ESP8266 and displays it on the Arduino Serial Monitor.
 
+---
 
-Edit the WiFi Name and Password
-In the connectToWiFi() function, replace the placeholders with your actual WiFi network name (SSID) and password:
-" espSerial.println("AT+CWJAP=\"YourNetworkName\",\"YourPassword\""); "
-    Replace YourNetworkName with your WiFi SSID.
-    Replace YourPassword with your WiFi password.
+## 📋 Features
 
-Upload the code to your Arduino
-Connect the ESP8266 module to the Arduino as follows:
-ESP8266 TX → Arduino Pin 2  
-ESP8266 RX → Arduino Pin 3
+- **Establishes a software serial connection** between Arduino and ESP8266.
+- **Sends AT commands** to connect the ESP8266 to your specified WiFi network.
+- **Reads and forwards responses** from the ESP8266 directly to the Serial Monitor for easy debugging.
 
------- Baud (115200) ------
+---
+
+## 🚀 Getting Started
+
+### 1. Edit the WiFi Name and Password
+
+In the `connectToWiFi()` function, replace the placeholders with your actual WiFi network name (SSID) and password:
+
+```cpp
+espSerial.println("AT+CWJAP=\"YourNetworkName\",\"YourPassword\"");
